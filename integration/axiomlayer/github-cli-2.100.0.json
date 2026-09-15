@@ -1,0 +1,592 @@
+{
+  "schema": "axiomlayer-github-cli-integration-v2",
+  "revision": 2,
+  "promotion": {
+    "candidateId": "fleet-2026-09-14.1",
+    "authority": "axiomlayer/dotfiles#49",
+    "authorityCommit": "ee9c1a27542f7918a30d9e9e33155baea2b96c8a",
+    "authorityPolicySha256": "f566c46f4f77a21756ec4684eaefbdb599b1fc1f258298f905ab4e375380492b",
+    "authorityVerifierSha256": "88f6debae07f8166a0978c9be06c5fb6fa1a914bf67a65ab32e7f63281eafc8c",
+    "authorityRepository": "axiomlayer/github-cli",
+    "forkRepository": "axiomlayer/github-cli",
+    "upstreamRepository": "cli/cli",
+    "commit": "45437bc7eeeb3359bbfddd1742f79de7652fd3e2",
+    "tree": "ffcb605f91e5f6b83cfb83003c0fdbe68b4c9e72",
+    "tag": "v2.100.0",
+    "version": "2.100.0",
+    "goDirective": "1.26.0",
+    "goToolchain": "1.26.8",
+    "sourceDateEpoch": 1788449059,
+    "releaseOrigin": "https://github.com/cli/cli/releases/download/v2.100.0",
+    "deliveryOrigin": "https://install.axiomlayer.com/bootstrap/gh/2.100.0"
+  },
+  "releaseChecksums": {
+    "archiveName": "gh_2.100.0_checksums.txt",
+    "archiveBytes": 1971,
+    "archiveUrl": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_checksums.txt",
+    "archiveSha256": "6b5916dffcfa6f593b1db7890f2ddc485318e99fa263acf73aa28ebb877b53cd"
+  },
+  "workflowActions": {
+    "actions/checkout": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "actions/setup-go": "b7ad1dad31e06c5925ef5d2fc7ad053ef454303e"
+  },
+  "workflowFirewall": {
+    "provenance": {
+      "repository": "cli/cli",
+      "commit": "38316c1c4f275030e3df6666382922e75410d68b",
+      "sourceRoot": ".github/workflows",
+      "archiveRoot": "integration/axiomlayer/upstream-workflows"
+    },
+    "activeWorkflow": {
+      "path": ".github/workflows/axiomlayer-integration.yml",
+      "sha256": "f4a5fe55e9af8b732717ab354b7a75ec73556c2e3c5adbcbd55d1bb98d680fc1",
+      "permissions": {
+        "contents": "read"
+      },
+      "secrets": [],
+      "variables": [],
+      "environments": [],
+      "actionReferences": [
+        "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e"
+      ]
+    },
+    "remote": {
+      "repository": "axiomlayer/github-cli",
+      "parent": "cli/cli",
+      "source": "cli/cli",
+      "defaultBranch": "trunk",
+      "prepublicationIndexedWorkflowPaths": [],
+      "strictIndexedWorkflowPaths": [
+        ".github/workflows/axiomlayer-integration.yml"
+      ]
+    },
+    "archive": [
+      {
+        "upstreamPath": ".github/workflows/acceptance.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/acceptance.yml",
+        "sha256": "db2b1bd9cc488356385994643f1984bb00d36d1084be5b4db589d9259955a127",
+        "kind": "workflow",
+        "secrets": [
+          "GH_ACCEPTANCE_TESTING_APP_CLIENT_ID",
+          "GH_ACCEPTANCE_TESTING_APP_PRIVATE_KEY"
+        ],
+        "variables": [],
+        "environments": [
+          "gh-acceptance-testing"
+        ],
+        "actionReferences": [
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/agentics-maintenance.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/agentics-maintenance.yml",
+        "sha256": "ffd5dc77047da464156003e209b43769e49e8d72c3480f61758c0800e84a9ab2",
+        "kind": "workflow",
+        "secrets": [
+          "GITHUB_TOKEN"
+        ],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3",
+          "github/gh-aw-actions/setup-cli@2a78d04403fdc6907d0f05327cffac9dbad5312d",
+          "github/gh-aw-actions/setup@2a78d04403fdc6907d0f05327cffac9dbad5312d"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/bump-go.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/bump-go.yml",
+        "sha256": "c97e798432cbdf73b08a2a5a40f271e07269e779c3cc9a1ea8258df49c49a457",
+        "kind": "workflow",
+        "secrets": [
+          "GITHUB_TOKEN"
+        ],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+          "golangci/golangci-lint-action@ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/codeql.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/codeql.yml",
+        "sha256": "a0d7cd688bd0367ba1b0a7c942a21882ee72cd90041fa13d995c8a43890159f8",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+          "github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938",
+          "github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938",
+          "github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/copilot-setup-steps.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/copilot-setup-steps.yml",
+        "sha256": "bf3a0d3309977c8b7bab77fba0a691886a039f2c2ce481fe630fa9cc4420760c",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "actions/checkout@v7",
+          "github/gh-aw-actions/setup-cli@423b3dc04bbf1b1797194a4a75aa5cf5d0d4f5b3"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/dependabot-triage.lock.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/dependabot-triage.lock.yml",
+        "sha256": "654263ab777f7adc716dba598dc91720b523c2ffd6a3e0f028310d1dfada8535",
+        "kind": "workflow",
+        "secrets": [
+          "CLI_TRIAGE_APP_CLIENT_ID",
+          "CLI_TRIAGE_APP_PRIVATE_KEY",
+          "GH_AW_GITHUB_MCP_SERVER_TOKEN",
+          "GH_AW_GITHUB_TOKEN",
+          "GITHUB_TOKEN"
+        ],
+        "variables": [
+          "GH_AW_DEFAULT_DETECTION_MAX_AI_CREDITS",
+          "GH_AW_DEFAULT_MAX_AI_CREDITS",
+          "GH_AW_DEFAULT_MAX_DAILY_AI_CREDITS",
+          "GH_AW_DEFAULT_MAX_TURNS",
+          "GH_AW_DEFAULT_MODEL_COPILOT",
+          "GH_AW_GITHUB_APPROVAL_LABELS",
+          "GH_AW_GITHUB_BLOCKED_USERS",
+          "GH_AW_GITHUB_TRUSTED_USERS",
+          "GH_AW_MODEL_AGENT_COPILOT",
+          "GH_AW_POLICY_ALLOW_CREATE_PULL_REQUEST",
+          "GH_AW_RUNTIME_FEATURES"
+        ],
+        "environments": [],
+        "actionReferences": [
+          "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1",
+          "actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+          "actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "github/gh-aw-actions/setup@2a78d04403fdc6907d0f05327cffac9dbad5312d"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/dependabot-triage.md",
+        "archivePath": "integration/axiomlayer/upstream-workflows/dependabot-triage.md",
+        "sha256": "39e69de5faec923698fe430e5abb3a2aca6d7cb732347c9cabcc5b0fb9fde30e",
+        "kind": "support",
+        "secrets": [
+          "GITHUB_TOKEN"
+        ],
+        "variables": [],
+        "environments": [],
+        "actionReferences": []
+      },
+      {
+        "upstreamPath": ".github/workflows/deployment.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/deployment.yml",
+        "sha256": "2e791943a79c4353098c8df9ea38d8aa8dcb7d19714ff56ba3218b0dd8d74db4",
+        "kind": "workflow",
+        "secrets": [
+          "GATEWATCHER_APP_STORE_CONNECT_API_BASE64_PRIVATE_KEY",
+          "GATEWATCHER_APP_STORE_CONNECT_API_ISSUER_ID",
+          "GATEWATCHER_APP_STORE_CONNECT_API_KEY_ID",
+          "GATEWATCHER_DEVELOPER_ID_CERT",
+          "GATEWATCHER_DEVELOPER_ID_PASSWORD",
+          "GITHUB_TOKEN",
+          "GPG_KEYGRIP_2026",
+          "GPG_KEY_2026",
+          "GPG_PASSPHRASE_2026",
+          "GPG_PUBKEY_2026",
+          "SITE_DEPLOY_APP_CLIENT_ID",
+          "SITE_DEPLOY_APP_PRIVATE_KEY",
+          "SPN_GITHUB_CLI_SIGNING_CLIENT_ID",
+          "SPN_GITHUB_CLI_SIGNING_TENANT_ID"
+        ],
+        "variables": [
+          "APPLE_DEVELOPER_INSTALLER_ID",
+          "MAC_APP_SIGNING_IDENTITY"
+        ],
+        "environments": [
+          "${{ inputs.environment }}"
+        ],
+        "actionReferences": [
+          "actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6",
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1",
+          "actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+          "actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "azure/login@7ddb5af1ef8758cf1353cf3b42f940aee27ba21c",
+          "github/setup-apple-codesign@9ba41e90aff70dea04ae487b776f98ee5efd610f",
+          "goreleaser/goreleaser-action@f06c13b6b1a9625abc9e6e439d9c05a8f2190e94",
+          "microsoft/setup-msbuild@30375c66a4eea26614e0d39710365f22f8b0af57"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/go.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/go.yml",
+        "sha256": "62af6adcecc4a334df5ec4abf19b1b673745a0d3fd1b91d5f75cb8ae5041db2c",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/govulncheck.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/govulncheck.yml",
+        "sha256": "3b92894865bacc6b9f0676e80c894a53c928fed436d59c2b58b8d63234b0bb09",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+          "github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/issue-triage.lock.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/issue-triage.lock.yml",
+        "sha256": "88da80e22b84a629d3f6030292fb999f7395ed984077b959a0d1da25bdf973b3",
+        "kind": "workflow",
+        "secrets": [
+          "CLI_TRIAGE_APP_CLIENT_ID",
+          "CLI_TRIAGE_APP_PRIVATE_KEY",
+          "GH_AW_GITHUB_MCP_SERVER_TOKEN",
+          "GH_AW_GITHUB_TOKEN",
+          "GITHUB_TOKEN"
+        ],
+        "variables": [
+          "GH_AW_DEFAULT_DETECTION_MAX_AI_CREDITS",
+          "GH_AW_DEFAULT_MAX_AI_CREDITS",
+          "GH_AW_DEFAULT_MAX_DAILY_AI_CREDITS",
+          "GH_AW_DEFAULT_MAX_TURNS",
+          "GH_AW_DEFAULT_MODEL_COPILOT",
+          "GH_AW_GITHUB_APPROVAL_LABELS",
+          "GH_AW_GITHUB_BLOCKED_USERS",
+          "GH_AW_GITHUB_TRUSTED_USERS",
+          "GH_AW_MODEL_AGENT_COPILOT",
+          "GH_AW_POLICY_ALLOW_CREATE_PULL_REQUEST",
+          "GH_AW_POLICY_STRICT",
+          "GH_AW_RUNTIME_FEATURES"
+        ],
+        "environments": [],
+        "actionReferences": [
+          "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1",
+          "actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3",
+          "actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "github/gh-aw-actions/setup@2a78d04403fdc6907d0f05327cffac9dbad5312d"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/issue-triage.md",
+        "archivePath": "integration/axiomlayer/upstream-workflows/issue-triage.md",
+        "sha256": "9e74529fd10c993047ebb4f1ac9d455f7d826be6fc4935a9c822c4dd193c252e",
+        "kind": "support",
+        "secrets": [
+          "CLI_TRIAGE_APP_CLIENT_ID",
+          "CLI_TRIAGE_APP_PRIVATE_KEY"
+        ],
+        "variables": [
+          "GH_AW_RUNTIME_FEATURES"
+        ],
+        "environments": [],
+        "actionReferences": [
+          "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/lint.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/lint.yml",
+        "sha256": "32f18fb118ea674a7349c675177d0076bc7ebd31f2b35fb3facaf354322d7c7c",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+          "golangci/golangci-lint-action@ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/scripts/bump-go.sh",
+        "archivePath": "integration/axiomlayer/upstream-workflows/scripts/bump-go.sh",
+        "sha256": "254804781a919ba291d9b44016770a68e8e6702a0a4540eb8e2cadd90a8198cf",
+        "kind": "support",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": []
+      },
+      {
+        "upstreamPath": ".github/workflows/scripts/spam-detection/eval-instructions.md",
+        "archivePath": "integration/axiomlayer/upstream-workflows/scripts/spam-detection/eval-instructions.md",
+        "sha256": "97eb7cdd4cc2c9a6810252f1ae7b8cc0803260611e5b8f3db4f37d7e4de3a9e8",
+        "kind": "support",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": []
+      },
+      {
+        "upstreamPath": ".github/workflows/scripts/spam-detection/eval-prompts.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/scripts/spam-detection/eval-prompts.yml",
+        "sha256": "d3482038c8e8f71a38a6806e1654d2ebc96e6b5fddfb823868645450563474cf",
+        "kind": "support",
+        "secrets": [
+          "GITHUB_TOKEN"
+        ],
+        "variables": [],
+        "environments": [],
+        "actionReferences": []
+      },
+      {
+        "upstreamPath": ".github/workflows/scripts/spam-detection/eval.sh",
+        "archivePath": "integration/axiomlayer/upstream-workflows/scripts/spam-detection/eval.sh",
+        "sha256": "9dae290b168e47d51354c261e14051ca982e1096f4662676a302cde4513f60a1",
+        "kind": "support",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": []
+      },
+      {
+        "upstreamPath": ".github/workflows/shared/dependabot-triage-security.md",
+        "archivePath": "integration/axiomlayer/upstream-workflows/shared/dependabot-triage-security.md",
+        "sha256": "f8e07b1840e2dc939b75138b8330469a735886cead35923afd5c2a168db097e1",
+        "kind": "support",
+        "secrets": [
+          "CLI_TRIAGE_APP_CLIENT_ID",
+          "CLI_TRIAGE_APP_PRIVATE_KEY"
+        ],
+        "variables": [],
+        "environments": [],
+        "actionReferences": []
+      },
+      {
+        "upstreamPath": ".github/workflows/shared/spam-criteria.md",
+        "archivePath": "integration/axiomlayer/upstream-workflows/shared/spam-criteria.md",
+        "sha256": "2341290085d8321ff29dfc7efd6b40d2e695a55a071a8e344d0f931fd112a4ca",
+        "kind": "support",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": []
+      },
+      {
+        "upstreamPath": ".github/workflows/triage-issues.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/triage-issues.yml",
+        "sha256": "523cece0da8983cd648c40895a5f15c55a086de5c5ab9b48e401b01c6d594531",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-invalid.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-off-topic.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-suspected-spam.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-enhancement-comment.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-label-incoming.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-on-issue-close.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-remove-needs-triage.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-unable-to-reproduce-comment.yml@df758d511475056e61d6d3a123621a854f10c646"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/triage-pull-requests.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/triage-pull-requests.yml",
+        "sha256": "5db643829a06bb3cc7fd64881d8512ab80922d5b851e4d1868af132d95ee0ab0",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-from-default-branch.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-no-help-wanted.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-label-external-pr.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-pr-requirements.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-ready-for-review.yml@df758d511475056e61d6d3a123621a854f10c646"
+        ]
+      },
+      {
+        "upstreamPath": ".github/workflows/triage-scheduled-tasks.yml",
+        "archivePath": "integration/axiomlayer/upstream-workflows/triage-scheduled-tasks.yml",
+        "sha256": "bc4326fe849d396089b554084c58b5cf1fc0181be152f54d255078d394c945ae",
+        "kind": "workflow",
+        "secrets": [],
+        "variables": [],
+        "environments": [],
+        "actionReferences": [
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/pitch-surface-top-issues.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-no-response-close.yml@df758d511475056e61d6d3a123621a854f10c646",
+          "desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-stale-issues.yml@df758d511475056e61d6d3a123621a854f10c646"
+        ]
+      }
+    ]
+  },
+  "nix": {
+    "version": "2.35.2",
+    "installerUrl": "https://releases.nixos.org/nix/nix-2.35.2/install",
+    "installerSha256": "9adda97297d9e8ab360df95c729eabff4f4f93d6db091953c3a68f29e3fb130c",
+    "wrapperPath": "integration/axiomlayer/install-nix-ci.sh",
+    "wrapperSha256": "e636dfdf728696f8485d004daa2d4169fbc568c2ad3e5c5aa5b75ef528d4d3de",
+    "candidateWrapperPath": "integration/axiomlayer/run-candidate-ci.sh",
+    "candidateWrapperSha256": "d0356c750805c88cc84f6231bf61a0f166bc667666bcc672b8acd14bdafa15d9",
+    "derivationPath": "integration/axiomlayer/default.nix",
+    "derivationSha256": "8b03239a6fed19a189d6644ad3aaa5d43a742f148a2fb549f4a297324a1f7232",
+    "binaryTarballSha256": {
+      "aarch64-darwin": "1695c13aba5afa7c2ecd6dc4a9393f602e7bbc440ed45e81602c831546580ec3",
+      "x86_64-darwin": "d725518d89f3b0b8d4af702a9d38d519814014cbe125afb3ed0545c9d755f6a5",
+      "aarch64-linux": "4d0302a2910f5eec1c33b8deef634f04899a75737e7001ec49908d003ae5efda",
+      "x86_64-linux": "0c3960a9792331a22081c3c7a5d8465db9b17c50b3acdf18587fa4c6f2cb1158"
+    },
+    "nixpkgs": {
+      "repository": "axiomlayer/nixpkgs",
+      "commit": "c3eea5b2156db11c7eeeada3dc737711255b253e",
+      "url": "https://github.com/NixOS/nixpkgs/archive/c3eea5b2156db11c7eeeada3dc737711255b253e.tar.gz",
+      "narHash": "sha256-vdhpDJ3Lr24lkZ+fDCjmBRRtw9/vcSzkqGJOJyF5h2U=",
+      "ghVendorHash": "sha256-ZqUs2BnasF3QBX0I2Sxh2A/CnO61Vy6gRn1hkf0n9AY="
+    },
+    "systems": [
+      "aarch64-darwin",
+      "aarch64-linux",
+      "x86_64-darwin",
+      "x86_64-linux"
+    ]
+  },
+  "credentials": {
+    "required": [],
+    "fabricated": [],
+    "statement": "The integration lane is read-only and exercises no authenticated API, signing, publishing, release, deployment, passphrase, or cloud-secret path."
+  },
+  "targets": {
+    "darwin-aarch64": {
+      "runner": "macos-15",
+      "nixSystem": "aarch64-darwin",
+      "buildMode": "nix-native",
+      "format": "zip",
+      "archiveName": "gh_2.100.0_macOS_arm64.zip",
+      "archiveBytes": 14212224,
+      "archiveUrl": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_macOS_arm64.zip",
+      "promotionUrl": "https://install.axiomlayer.com/bootstrap/gh/2.100.0/gh_2.100.0_macOS_arm64.zip",
+      "archiveRoot": "gh_2.100.0_macOS_arm64",
+      "binary": "bin/gh",
+      "archiveSha256": "45f9a62da2f6e641a7fad57e2ce39656dfd7ef331372d80a2a2aed65abb01642",
+      "binarySha256": "51f1bd7ed1724774d2c1d91fb4efdb676d3eb200ce95c0021c8544fe7435bc13"
+    },
+    "darwin-x86_64": {
+      "runner": "macos-15-intel",
+      "nixSystem": "x86_64-darwin",
+      "buildMode": "nix-native",
+      "format": "zip",
+      "archiveName": "gh_2.100.0_macOS_amd64.zip",
+      "archiveBytes": 15818005,
+      "archiveUrl": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_macOS_amd64.zip",
+      "promotionUrl": "https://install.axiomlayer.com/bootstrap/gh/2.100.0/gh_2.100.0_macOS_amd64.zip",
+      "archiveRoot": "gh_2.100.0_macOS_amd64",
+      "binary": "bin/gh",
+      "archiveSha256": "fcd7799e85eb575f3c7d2b1679bfbfedaefa1269d4bc7d096b51e10939b4812b",
+      "binarySha256": "43f9c5f8fb3e6ed097bff7d1b7b86158cddddd4fc6b6704b6e1c3c2b7d35dcbd"
+    },
+    "linux-aarch64": {
+      "runner": "ubuntu-24.04-arm",
+      "nixSystem": "aarch64-linux",
+      "buildMode": "nix-native",
+      "format": "tar.gz",
+      "archiveName": "gh_2.100.0_linux_arm64.tar.gz",
+      "archiveBytes": 13783869,
+      "archiveUrl": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_linux_arm64.tar.gz",
+      "promotionUrl": "https://install.axiomlayer.com/bootstrap/gh/2.100.0/gh_2.100.0_linux_arm64.tar.gz",
+      "archiveRoot": "gh_2.100.0_linux_arm64",
+      "binary": "bin/gh",
+      "archiveSha256": "ea4e7a581a32ccad6cc7923cb1576ac5859ba4b9a16ab22eb8f8a96e78e2e961",
+      "binarySha256": "28a037b967065aa314cb6d539943b55d27ef2f97c523ab2b6023ccf284e1828d"
+    },
+    "linux-x86_64": {
+      "runner": "ubuntu-24.04",
+      "nixSystem": "x86_64-linux",
+      "buildMode": "nix-native",
+      "format": "tar.gz",
+      "archiveName": "gh_2.100.0_linux_amd64.tar.gz",
+      "archiveBytes": 15152253,
+      "archiveUrl": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_linux_amd64.tar.gz",
+      "promotionUrl": "https://install.axiomlayer.com/bootstrap/gh/2.100.0/gh_2.100.0_linux_amd64.tar.gz",
+      "archiveRoot": "gh_2.100.0_linux_amd64",
+      "binary": "bin/gh",
+      "archiveSha256": "e4d4bb4498e8d007abe545b6568926793ace1b6447da598294a610018cb164be",
+      "binarySha256": "553949e2efa12842771efe6012aa4de21f1d591530ec17fc435f610f10e017ee"
+    },
+    "windows-aarch64": {
+      "runner": "windows-11-arm",
+      "nixSystem": null,
+      "buildMode": "go-native",
+      "format": "zip",
+      "archiveName": "gh_2.100.0_windows_arm64.zip",
+      "archiveBytes": 13746870,
+      "archiveUrl": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_windows_arm64.zip",
+      "promotionUrl": "https://install.axiomlayer.com/bootstrap/gh/2.100.0/gh_2.100.0_windows_arm64.zip",
+      "archiveRoot": "",
+      "binary": "bin/gh.exe",
+      "archiveSha256": "7beaeb4743cf255809a8e574a2724c685b566545e04eabea284fe38a56c15b02",
+      "binarySha256": "d36ec6d8429409592dc3a58f169c2c38d986af6f232edf8ddebb6020dfb1dab1"
+    },
+    "windows-x86_64": {
+      "runner": "windows-2025",
+      "nixSystem": null,
+      "buildMode": "go-native",
+      "format": "zip",
+      "archiveName": "gh_2.100.0_windows_amd64.zip",
+      "archiveBytes": 15326700,
+      "archiveUrl": "https://github.com/cli/cli/releases/download/v2.100.0/gh_2.100.0_windows_amd64.zip",
+      "promotionUrl": "https://install.axiomlayer.com/bootstrap/gh/2.100.0/gh_2.100.0_windows_amd64.zip",
+      "archiveRoot": "",
+      "binary": "bin/gh.exe",
+      "archiveSha256": "227e35230b25db3fa1b997bab7cf4d67df0470a3b75b99e4ee66bce1a7cd4e72",
+      "binarySha256": "2ae2b350c227a618f2d8965b1900aeee13446ff42e17ef0bd5a0b6405c593cfb"
+    }
+  },
+  "unsupportedHostedProof": [
+    {
+      "capability": "native-nix",
+      "targets": ["windows-aarch64", "windows-x86_64"],
+      "status": "unsupported",
+      "reason": "Nix has no supported native Windows runtime; Windows is built and tested from the same commit with the exact Go toolchain."
+    },
+    {
+      "capability": "native-wsl",
+      "targets": ["wsl-aarch64", "wsl-x86_64"],
+      "status": "hardware-required",
+      "reason": "GitHub-hosted runners do not provide WSL; Ocelot and Siberian must prove the matching Linux artifacts on their physical WSL installations."
+    },
+    {
+      "capability": "promotion-origin",
+      "targets": ["all"],
+      "status": "downstream-promotion-required",
+      "reason": "This fork proves upstream bytes against the device contract. Dotfiles promotion must separately prove those identical bytes at install.axiomlayer.com."
+    }
+  ]
+}
